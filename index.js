@@ -1,11 +1,38 @@
 const express = require('express');
 const app = express();
 
-// Serve static files from the public directory
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
-// Render the index.ejs file
+
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('./index');
 });
+
+// app.get('*', (req, res) => {
+//     res.render('404');
+// });
+
+app.get('/login', (req, res) => {
+    res.render('./auth/login');
+});
+app.get('/signup', (req, res) => {
+    res.render('./auth/signup');
+});
+app.get('/reset', (req, res) => {
+    res.render('./auth/reset');
+});
+app.get('/dashboard', (req, res) => {
+    res.render('./dashboard/index');
+});
+app.get('/dashboard/profile', (req, res) => {
+    res.render('./dashboard/profile');
+});
+app.get('/about', (req, res) => {
+    res.render('./about');
+});
+app.get('/contact', (req, res) => {
+    res.render('./contact');
+});
+
+
 app.listen(3000)

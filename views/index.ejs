@@ -1,56 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%- include('components/head') %>
+
     <title>Sharing with Caring - A Step towards Sustainable Development</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css">
-
-    <link rel="icon" type="image/png" href="./images/logo.png" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-    />
   </head>
-
   <body>
     <!-- header start -->
     <!-- nav bar start -->
-    <div class="bg-green-400 w-full p-0 m-0">
-      <div class="flex justify-between h-10">
-        <div class="text-right sm:hidden">
-          <span class="material-symbols-outlined my-1 mx-4 cursor-default" id="menu">
-            menu
-          </span>
-        </div>
-      </div>
-
-      <div
-        class="hidden sm:flex sm:visible sm:top-1 sm:absolute sm:left-0"
-        id="menuOptions"
-      >
-        <div class="text-center sm:mx-8 hover:underline">
-          <a href="#">About</a>
-        </div>
-        <div class="text-center sm:mx-8 hover:underline">
-          <a href="#">Service</a>
-        </div>
-        <div class="text-center sm:mx-8 hover:underline">
-          <a href="#">Blog</a>
-        </div>
-        <div class="text-center sm:mx-8 hover:underline">
-          <a href="#">Contact Us</a>
-        </div>
-      </div>
-    </div>
+    <%- include('components/navbar') %>
     <!-- nav bar end -->
 
     <div
       class="flex flex-col justify-center items-center bg-center bg-cover bg-opacity-50 h-screen"
       style="background-image: url('/images/background.jpg')"
     >
-      <div>   
+      <div>
         <div class="flex flex-col items-center">
           <img class="h-16 w-16" src="./images/logo.png" alt="logo" />
           <div class="font-medium text-white text-center mb-2 cursor-default">
@@ -118,6 +83,7 @@
       <div class="flex justify-center items-center">
         <button
           class="bg-green-600 hover:bg-green-800 text-white font-medium py-2 px-4 rounded mr-2"
+          onclick="window.location.href='/login'"
         >
           Already a Member
         </button>
@@ -129,62 +95,49 @@
       </div>
     </div>
     <!-- header end -->
-    <!-- login window start -->
 
-    <!-- login window end -->
+    <!-- main body start -->
+    <div id="blog">
+      <!-- left sided card start -->
+      <div class="flex flex-col p-5 sm:flex-row">
+        <img
+          src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&w=1000&q=80"
+          alt="image"
+          class="mx-auto my-5 rounded-lg justify-center items-center bg-center bg-cover object-contain h-64 sm:float-right"
+        />
+        <p class="mx-10 sm:float-left">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor
+          esse cupiditate eos iste consequatur officia consectetur iusto, nisi
+          obcaecati ex nemo perspiciatis ipsam quisquam quia laudantium,
+          laboriosam doloribus cum libero? Asperiores esse porro fugiat
+          reprehenderit deleniti repellendus amet, eius, ullam cum nam autem
+          error repellat omnis reiciendis magnam quo.
+        </p>
+      </div>
+      <!-- card end -->
+      <!-- right sided card start -->
+      <div class="flex flex-col p-5 sm:flex-row-reverse">
+        <img
+          src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&w=1000&q=80"
+          alt="image"
+          class="mx-auto my-5 rounded-lg justify-center items-center bg-center bg-cover object-contain h-64 sm:float-right"
+        />
+        <p class="mx-10 sm:float-left">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor
+          esse cupiditate eos iste consequatur officia consectetur iusto, nisi
+          obcaecati ex nemo perspiciatis ipsam quisquam quia laudantium,
+          laboriosam doloribus cum libero? Asperiores esse porro fugiat
+          reprehenderit deleniti repellendus amet, eius, ullam cum nam autem
+          error repellat omnis reiciendis magnam quo.
+        </p>
+      </div>
+      <!-- card end -->
+    </div>
+    <!-- main body end -->
+
     <!-- footer start -->
-    <footer class="bg-green-800 text-white py-6">
-      <div class="container mx-auto flex flex-col justify-between px-3">
-        <div>
-          <div class="flex flex-col items-center">
-            <h3 class="font-bold mb-2">About Us</h3>
-            <p class="mb-2">
-              Our team dedicates itself to preserving the environment and
-              supporting local communities.
-            </p>
-          </div>
-        </div>
-
-        <div class="flex flex-wrap justify-between">
-          <div class="flex flex-col items-center">
-            <h3 class="font-bold mb-2">Contact Us</h3>
-            <ul class="list-none">
-              <li>VBS Purvanchal University</li>
-              <li>Jaunpur, India</li>
-              <li>email@example.com</li>
-              <li>(123) 456-7890</li>
-            </ul>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <h3 class="font-bold mb-2">Our Team</h3>
-            <ul class="list-none">
-              <li>Yatndeep Dubey</li>
-              <li>Shivang Srivastava</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="container mx-auto mt-4 flex justify-center items-center">
-        <p>&copy; 2023 Sharing with Caring. All rights reserved.</p>
-      </div>
-    </footer>
+    <%- include('components/footer.ejs') %>
 
     <!-- footer end -->
   </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  $(document).ready(function() {
-    $('#menu').click(function() {
-      $('#menuOptions').toggleClass('hidden');
-      if ($('#menu').text().trim() === 'menu') {
-        $('#menu').text('close');
-      } else {
-        $('#menu').text('menu');
-      }
-    });
-  });
-</script>
-
-
 </html>
