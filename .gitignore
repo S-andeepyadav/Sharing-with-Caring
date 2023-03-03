@@ -1,0 +1,54 @@
+# Logs
+logs
+*.log
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build output
+dist/
+build/
+tmp/
+out/
+*.min.js
+
+# Other generated files
+coverage/
+.vscode/
+.nyc_output/
+*.seed
+*.pid
+*.raw
+*.map
+*.css.map
+*.js.map
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore any .env files in the project root except the example one
+!.env.example
+
+# Editor-specific files
+.vs/
+.idea/
+*.iml
+
+# macOS-specific files
+.DS_Store
+
+# Windows-specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Cache and backup files
+*.swp
+*.bak
+*.cache
+*.backup
+*~
